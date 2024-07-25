@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motorcycle Tutorial</title>
+    <link rel="stylesheet" href="motor.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Bagian judul -->
+        <div class="title">
+          <h1>Tutorial Cara Mengendarai Motor Matic</h1>
+        </div>
+        <!-- Konten utama -->
+        <div class="container">
+          <!-- Kolom tombol -->
+          <div class="button-column">
+                <!-- Tombol untuk memilih motor matic -->
+                <button class="custom-button" onclick="navigateToPage('matic')">Motor Matic</button>
+                <!-- Tombol untuk memilih motor manual -->
+                <button class="custom-button" onclick="navigateToPage('manual')">Motor Manual</button>
+                <!-- Tombol untuk memilih motor kopling -->
+                <button class="custom-button" onclick="navigateToPage('kopling')">Motor Kopling</button>
+                <!-- Rectangle yang lebih besar -->
+                <div class="big-rectangle"></div>
+                <!-- Rectangle yang lebih kecil -->
+                <div class="small-rectangle"></div>
+          </div>
+          <!-- Area untuk menampilkan motor yang dipilih -->
+          <div class="selected-motor">
+    
+          </div>
+        </div>
+      </div>
+      <h3 class="tutorial-title">Motorcycle Tutorial</h3>
+      <!-- Menghubungkan library Vue.js -->
+      <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+      <!-- Menghubungkan file JavaScript -->
+      <script src="app.js"></script>
+    
+      <script>
+        function navigateToPage(motorType) {
+          // Mengarahkan pengguna ke halaman selanjutnya berdasarkan jenis motor yang dipilih
+          if (motorType === 'matic') {
+            window.location.href = 'matic.html?type=' + motorType;
+          } else if (motorType === 'manual') {
+            window.location.href = 'manual.html?type=' + motorType;
+          } else if (motorType === 'kopling') {
+            window.location.href = 'kopling.html?type=' + motorType;
+          }
+        }
+    </script>
+</body>
+</html>
